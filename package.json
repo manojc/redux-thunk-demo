@@ -1,0 +1,27 @@
+{
+	"name": "html-service",
+	"version": "1.0.0",
+	"description": "test repo",
+	"main": "src/app",
+	"typings": "dist/app",
+	"scripts": {
+		"start": "webpack --colors && concurrently -r -n \"Webpack,Nodemon\" \"npm run webpack-watch\" \"npm run server-watch\"",
+		"webpack-watch": "webpack --watch --colors",
+		"server-watch": "nodemon --watch dist/server.js dist/server.js",
+		"build": "./node_modules/.bin/webpack"
+	},
+	"author": "chalodem@gmail.com",
+	"license": "ISC",
+	"dependencies": {
+		"http-server": "^0.11.1",
+		"redux": "^4.0.1",
+		"redux-thunk": "^2.3.0",
+		"webpack": "^4.35.0",
+		"webpack-cli": "^3.3.4"
+	},
+	"devDependencies": {
+		"kuker-emitters": "^6.7.4",
+		"ts-loader": "^6.0.4",
+		"typescript": "^3.5.2"
+	}
+}
